@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: medium; /* You can keep this or change to a responsive unit */
+}
+
+nav {
+  height: 10vh; /* Use viewport height */
+  background: #e1ddda;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%; /* Use percentage for padding */
+}
+
+.logo-container {
+  padding: 0 20px; /* Adjusted padding */
+}
+
+.logo {
+  width: 50px; 
+  height: auto; /* Maintain aspect ratio */
+}
+
+.nav-items a {
+  text-decoration: overline;
+  color: #000;
+  font-size: 1.1rem; /* Consider using vw for responsiveness */
+  padding: 0 1.5rem;
+}
+
+.nav-items a:hover {
+  color: #fff;
+}
+
+.hero {
+  background: #e9e3df;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh; /* Use viewport height */
+  padding: 1rem 5%; /* Use percentage for padding */
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #000;
+}
+
+.column-left h1 {
+  margin-bottom: 1rem;
+  font-size: 3vw; /* Use viewport width for responsive font size */
+}
+
+.column-left p {
+  margin-bottom: 2rem;
+  font-size: 2vw; /* Use viewport width for responsive font size */
+  line-height: 1.5;
+}
+
+button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border: none;
+  color: #fdcc04;
+  background: #000;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 80%; /* Adjust width to fit the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+
+  .column-left h1 {
+    font-size: 5vw; /* Responsive font size */
+  }
+
+  .column-left p {
+    font-size: 4vw; /* Responsive font size */
+  }
+
+  button {
+    padding: 0.8rem 2rem; /* Adjust button size for smaller screens */
+  }
+
+}
+.nav-items {
+  display: flex;
+  padding-right: 3rem;
+}
+
+.nav-item {
+  position: relative; /* Position relative for dropdown positioning */
+  margin-right: 2rem; /* Space between nav items */
+}
+
+.nav-item span {
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.dropdown {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Position it absolutely */
+  background-color: #fff; /* Background color */
+  border: 1px solid #ccc; /* Border for dropdown */
+  padding: 10px; /* Padding for dropdown */
+  z-index: 1000; /* Ensure it appears above other elements */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+.nav-item:hover span {
+  color: #fafaf7; /* Change this to your desired hover color */
+}
+
+.nav-item:hover .dropdown {
+  display: block; /* Show dropdown on hover */
+}
